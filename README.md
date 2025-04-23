@@ -11,7 +11,7 @@ This project evaluates 6 Explainable AI (XAI) methods in the context of semantic
 
 ### Project Goals
 Formulated in the preliminary study, the following primary research question and two sub-questions guide the analysis presented in the notebooks:
--	Which methods for image segmentation perform well on universal models, particularly in the context of autonomous driving?
+-	Which methods for image segmentation perform well on segmentation models, particularly in the context of autonomous driving?
   - What is the performance of the universal model in semantic segmentation tasks?
   - How do methods perform in terms of established evaluation metrics?
  
