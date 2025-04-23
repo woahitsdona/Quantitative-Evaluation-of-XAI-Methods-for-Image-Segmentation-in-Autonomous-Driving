@@ -3,36 +3,33 @@
 
 ## Project Overview
 ### Description 
-This project evaluates various Explainable AI (XAI) methods in the context of semantic segmentation for autonomous driving. The evaluation is divided into three phases:
+This project evaluates  6Explainable AI (XAI) methods in the context of semantic segmentation for autonomous driving. The evaluation is divided into three phases:
 
 - Phase 1: Model application using uncompressed high-resolution images from the Mapillary Vistas dataset, segmented using OneFormer. Segmentation accuracy is evaluated using the Intersection-over-Union (IoU) metric.
-- Phase 2: Application of XAI methods (LIME, Grad-CAM, Seg-Grad-CAM, Guided Grad-CAM, Saliency, XRAI, and L-CRP) to analyze interpretability.
+- Phase 2: Application of XAI methods (LIME, Grad-CAM, Seg-Grad-CAM, Saliency (Vanilla Gradient), XRAI, Integrated Gradients (IG)) to analyze interpretability.
 - Phase 3: Systematic evaluation of XAI methods using quantitative metrics (e.g. IROF, Max-Sensitivity, Focus, Pointing Game, Effective Complexity) targeting robustness, faithfulness, localization accuracy, and explanation complexity.
 
 ### Project Goals
-- Given the initial circumstances and objectives, the following primary research questions and two sub-question were developed:
+Given the initial circumstances and objectives, the following primary research questions and two sub-question were developed:
 -	Which methods for image segmentation perform well on universal models, particularly in the context of autonomous driving?
--	What is the performance of the universal model in semantic segmentation tasks?
--	How do methods perform in terms of established evaluation metrics?
+  - What is the performance of the universal model in semantic segmentation tasks?
+  - How do methods perform in terms of established evaluation metrics?
  
 ### Data
-- Dataset: Mapillary Vistas (15,000 images)
+- Dataset: Mapillary Vistas (subset of 805 images with uniform dimensions (3264×2448 pixels))
 - Models Used: OneFormer for segmentation; DeeplabV3 in later evaluation stages
-- Tasks: Semantic segmentation on selected labels with similar frequency distribution
+- Tasks: Semantic segmentation on selected labels
 
 ### Approach
 #### Model & Segmentation
-- Model: OneFormer
+- Model: OneFormer and DeeplabV3
 - Dataset preprocessing and segmentation using HuggingFace transformers and torchvision
 
 #### XAI Methods Evaluated
-- LIME (Captum)
-- Saliency (Vanilla Gradient - Captum)
-- Grad-CAM (LayerGradCAM - Captum)
-- Seg-Grad-CAM (GitHub)
-- XRAI (Google Saliency)
-- L-CRP (GitHub)
-- Integrated Gradients (Captum)
+- LIME, Saliency, and Grad-CAM (LayerGradCAM) via Captum: https://github.com/pytorch/captum
+- Seg-Grad-CAM: https://github.com/kiraving/SegGradCAM
+- XRAI via Google’s Saliency Library: https://github.com/PAIR-code/saliency
+- Integrated Gradients: https://github.com/ankurtaly/Integrated-Gradients
 
 #### Evaluation Metrics (used in Phase 3)
 - Max-Sensitivity (Yeh et al., 2019): Measures the stability of explanations under slight input perturbations (robustness).
@@ -42,12 +39,12 @@ This project evaluates various Explainable AI (XAI) methods in the context of se
 - Effective Complexity (Nguyen & Martínez, 2020): Measures how many features are necessary to explain the prediction without deviating significantly from model accuracy.
 
 ### Data Used
-- Cordts u. a., „The Cityscapes Dataset for Semantic Urban Scene Understanding“. (Quelle: http://arxiv.org/abs/1604.01685)
+- Neuhold, G., Ollmann, T., Bulo, S. R., & Kontschieder, P. (2017). The Mapillary Vistas Dataset for Semantic Understanding of Street Scenes. 2017 IEEE International Conference on Computer Vision (ICCV), 5000–5009. https://doi.org/10.1109/ICCV.2017.534
   
 ### Additional Sources
 - DeeplabV3: https://arxiv.org/pdf/1706.05587
 - OneFormer: http://arxiv.org/abs/2211.06220
-- HuggingFace: https://huggingface.co/
+- HuggingFace: https://huggingface.co/shi-labs/oneformer_coco_swin_large
 - DeeplabV3 Benchmark (via Paperswithcode): https://paperswithcode.com/method/deeplabv3
 - OneFormer Benchmark (via Paperswithcode): https://paperswithcode.com/paper/oneformer-one-transformer-to-rule-universal
 
@@ -80,9 +77,9 @@ This project evaluates various Explainable AI (XAI) methods in the context of se
 2. Clone this repository:
 git clone https://github.com/woahitsdona/Quantitative-Evaluation-of-XAI-Methods-for-Image-Segmentation-in-Autonomous-Driving.git
 cd Quantitative-Evaluation-of-XAI-Methods-for-Image-Segmentation-in-Autonomous-Driving
-
 3. Run the notebook: Open the notebook Individualprojekt_AI_HS24_Liridona_C.ipynb in JupyterLab and execute the cells sequentially to prepare the data, train the models, and analyze the results.
 https://github.com/woahitsdona/AI_Individualprojekt.git
+
 ## Citation & Sources
 - Neuhold et al., 2017: Mapillary Vistas Dataset
 - OneFormer: arXiv
