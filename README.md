@@ -57,13 +57,13 @@ Formulated in the preliminary study, the following primary research question and
 - PyTorch 2.3.1 with GPU support
 - CUDA 12.1
 ### Package Installation
-*pip install transformers*
-*pip install opencv-python*
-*pip install --upgrade grad-cam*
-*pip install captum*
-*pip install saliency[tf1]*
-*pip install quantus*
-*pip install cachetools*
+- *pip install transformers*
+- *pip install opencv-python*
+- *pip install --upgrade grad-cam*
+- *pip install captum*
+- *pip install saliency[tf1]*
+- *pip install quantus*
+- *pip install cachetools*
 ### Libraries Used
 - PyTorch, TorchVision – model and image handling
 - Captum, Grad-CAM, Google Saliency, Quantus – XAI methods and metrics
