@@ -23,7 +23,7 @@ Formulated in the preliminary study, the following primary research question and
 
 ### Approach
 #### Model & Segmentation
-- Model: OneFormer and DeeplabV3
+- Model: **OneFormer** (http://arxiv.org/abs/2211.06220) and **DeeplabV3** (https://arxiv.org/pdf/1706.05587)
 - Dataset preprocessing and segmentation using HuggingFace transformers and torchvision
 
 #### XAI Methods Evaluated
@@ -40,8 +40,6 @@ Formulated in the preliminary study, the following primary research question and
 - **Effective Complexity** (Nguyen & Martínez, 2020): Measures how many features are necessary to explain the prediction without deviating significantly from model accuracy.
   
 ### Additional Sources
-- OneFormer: http://arxiv.org/abs/2211.06220
-- DeeplabV3: https://arxiv.org/pdf/1706.05587
 - HuggingFace: https://huggingface.co/shi-labs/oneformer_coco_swin_large
 - DeeplabV3 Benchmark (via Paperswithcode): https://paperswithcode.com/method/deeplabv3
 - OneFormer Benchmark (via Paperswithcode): https://paperswithcode.com/paper/oneformer-one-transformer-to-rule-universal
