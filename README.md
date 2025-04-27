@@ -6,7 +6,7 @@
 This project evaluates 6 Explainable AI (XAI) methods in the context of semantic segmentation for autonomous driving. The evaluation is divided into three phases:
 
 - Phase 1: Model application using uncompressed high-resolution images from the Mapillary Vistas dataset, segmented using OneFormer. Segmentation accuracy is evaluated using the Intersection-over-Union (IoU) metric.
-- Phase 2: Application of XAI methods (LIME, Grad-CAM, Seg-Grad-CAM, Saliency (Vanilla Gradient), XRAI, Integrated Gradients (IG)) to analyze interpretability.
+- Phase 2: Application of XAI methods (LIME, Grad-CAM, Seg-Grad-CAM, Saliency (Vanilla Gradient), XRAI and Integrated Gradients (IG)) to analyze interpretability.
 - Phase 3: Systematic evaluation of XAI methods using quantitative metrics (e.g. IROF, Max-Sensitivity, Focus, Pointing Game, Effective Complexity) targeting robustness, faithfulness, localization accuracy, and explanation complexity.
 
 ### Project Goals
@@ -46,9 +46,10 @@ Formulated in the preliminary study, the following primary research question and
 - Quantus XAI Toolkit (Hedström et al., 2023): https://github.com/understandable-machine-intelligence-lab/Quantus
 
 ## Project Structure 
-- Model_Liridona_C.ipynb: Model application and segmentation (IoU evaluation)
-- Methods&Metrics_Liridona_C.ipynb: XAI method application and evaluation
-- README.md: Project documentation
+- Model_Cerkini.ipynb: Model application and segmentation (IoU evaluation)
+- Methods&Metrics_Cerkini_image1.ipynb: XAI method application and evaluation (on image1)
+- Methods&Metrics_Cerkini_image2.ipynb: XAI method application and evaluation (on image2 for reference)
+- README.md: Project documentatio
   
 ## Installation & Environment
 ### Recommended Environment
@@ -70,10 +71,12 @@ Formulated in the preliminary study, the following primary research question and
 - Transformers – OneFormer model integration
 
 ## Instructions for Running the Code
-1. Start the environment: Open “GPU Hub” and launch a Jupyter notebook server with “PyTorch 2.3.1 and GPU support.
+1. Start the environment: Open “GPU Hub” and launch a Jupyter notebook server with “PyTorch 2.6.0 and GPU support.
 2. Clone this repository: git clone https://github.com/woahitsdona/Quantitative-Evaluation-of-XAI-Methods-for-Image-Segmentation-in-Autonomous-Driving.git
 cd Quantitative-Evaluation-of-XAI-Methods-for-Image-Segmentation-in-Autonomous-Driving
-3. Run the notebook: Open Model_Liridona_C.ipynb or Methods&Metrics_Liridona_C.ipynb in JupyterLab and execute the cells sequentially to preprocess the data, apply the models and XAI methods, and perform the corresponding analyses.
+3. Access the images: To successfully run the notebooks, access to the subset of Mapillary Vistas images is required. A ZIP file containing the 805 images has been uploaded separately to ILIAS in a dedicated folder. Please download and extract the images into the folder ./images/ within the cloned repository.
+
+Run the notebook: Open Methods&Metrics_Cerkini_image1.ipynb, Methods&Metrics_Cerkini_image2.ipynb or Methods&Metrics_Cerkini.ipynb in JupyterLab and execute the cells sequentially to preprocess the data, apply the models and XAI methods, and perform the corresponding analyses.
 
 ## Notes
 - This repository includes two notebooks documenting the full pipeline.
