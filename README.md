@@ -52,7 +52,7 @@ Formulated in the preliminary study, the following primary research question and
   
 ## Installation & Environment
 ### Recommended Environment
-- PyTorch 2.3.1 with GPU support
+- PyTorch 2.6.0 with GPU support
 - CUDA 12.1
 ### Package Installation
 - *pip install transformers*
