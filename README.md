@@ -47,8 +47,8 @@ Formulated in the preliminary study, the following primary research question and
 
 ## Project Structure 
 - Model_Cerkini.ipynb: Model application and segmentation (IoU evaluation)
-- Methods&Metrics_Cerkini_image1.ipynb: XAI method application and evaluation (on image1 - label car)
-- Methods&Metrics_Cerkini_image2.ipynb: XAI method application and evaluation (on image2 - label person for reference)
+- Methods&Metrics_Cerkini_image1.ipynb: XAI method application and evaluation (on image1)
+- Methods&Metrics_Cerkini_image2.ipynb: XAI method application and evaluation (on image2 for reference)
 - README.md: Project documentatio
   
 ## Installation & Environment
